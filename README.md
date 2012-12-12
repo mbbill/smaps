@@ -24,4 +24,4 @@
         To get summary memory info:
              smaps -p <pid>
         Examine the most 'pss' consumption segments:
-             smaps -p <pid> -s pss | sort -rn | head
+             smaps -p <pid> -s pss | grep -e ' rw-p ' | sort -rn | head
