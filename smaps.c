@@ -90,7 +90,7 @@ void print_usage(void) {
 	printf("Example:\n");
 	printf("    To get summary memory info:\n");
 	printf("         smaps -p <pid>\n");
-	printf("    Examine the most 'pss' consumption of the 'rw-p' segments:\n");
+	printf("    Find out the most 'pss' consumption of the 'rw-p' segments:\n");
 	printf("         smaps -p <pid> -s pss | grep -e ' rw-p '| sort -rn | head\n");
 }
 
