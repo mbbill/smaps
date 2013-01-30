@@ -216,7 +216,10 @@ int main(const int argc, char **argv) {
 		memset(&seg_sum, 0, sizeof(seg_sum));
 		for (i = 0; i < seg_index; i++) {
 			for (j = 0; j < FIELD_LEN; j++) {
-				seg_sum.fields[j] += (segs[i]->fields)[j];
+				if (j == kps || j == mmu)
+					seg_sum.fields[j] = (segs[i]->fields)[j];
+				else
+					seg_sum.fields[j] += (segs[i]->fields)[j];
 			}
 		}
 		printf("\n%20s  %d mappings\n\n","Total:",seg_index-1);
