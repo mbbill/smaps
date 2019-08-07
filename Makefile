@@ -1,2 +1,2 @@
 all:
-	gcc smaps.c -o smaps
+	gcc -g smaps.c -o smaps
